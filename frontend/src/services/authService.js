@@ -1,8 +1,8 @@
 import axios from 'axios';
 
-const API_URL = process.env.REACT_APP_API_URL 
-  ? `${process.env.REACT_APP_API_URL}/api/auth`
-  : '/api/auth';
+// Remove trailing slash from API URL if present
+const baseURL = process.env.REACT_APP_API_URL?.replace(/\/$/, '') || '';
+const API_URL = baseURL ? `${baseURL}/api/auth` : '/api/auth';
 
 // Register user
 const signup = async (email, password) => {

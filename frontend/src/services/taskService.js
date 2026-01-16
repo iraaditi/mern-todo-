@@ -1,8 +1,8 @@
 import axios from 'axios';
 
-const API_URL = process.env.REACT_APP_API_URL 
-  ? `${process.env.REACT_APP_API_URL}/api/tasks`
-  : '/api/tasks';
+// Remove trailing slash from API URL if present
+const baseURL = process.env.REACT_APP_API_URL?.replace(/\/$/, '') || '';
+const API_URL = baseURL ? `${baseURL}/api/tasks` : '/api/tasks';
 
 // Get auth header
 const getAuthHeader = () => {
