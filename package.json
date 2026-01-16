@@ -1,0 +1,16 @@
+{
+  "name": "mern-todo-app",
+  "version": "1.0.0",
+  "description": "A minimalist dark-themed MERN stack todo application",
+  "scripts": {
+    "install-backend": "cd backend && npm install",
+    "install-frontend": "cd frontend && npm install",
+    "install-all": "npm run install-backend && npm run install-frontend",
+    "backend": "cd backend && npm run dev",
+    "frontend": "cd frontend && npm start",
+    "dev": "echo 'Please run backend and frontend in separate terminals' && echo 'Backend: npm run backend' && echo 'Frontend: npm run frontend'"
+  },
+  "keywords": ["mern", "todo", "react", "mongodb", "express", "nodejs"],
+  "author": "",
+  "license": "ISC"
+}
